@@ -1,26 +1,25 @@
-package _02;
+package _03;
 
 import java.util.Scanner;
-
-public class Temperature02 {
+public class Temperature03 {
 
     private double temperature;
     private char unit;
 
-    public Temperature02() {
+    public Temperature03() {
         temperature = 0;
         unit = 'C';
     }
-    public Temperature02(double temperature) {
+    public Temperature03(double temperature) {
         this.temperature = temperature;
         unit = 'C';
     }
-    public Temperature02(char unit) {
+    public Temperature03(char unit) {
         this.unit = unit;
         temperature = 0;
     }
 
-    public Temperature02(double temperature, char unit) {
+    public Temperature03(double temperature, char unit) {
         this.temperature = temperature;
         this.unit = unit;
     }
@@ -55,6 +54,18 @@ public class Temperature02 {
         }
         System.out.println("Temperature = " + y + "degrees F.");
     }
+    public void set(double temperature) {
+        this.temperature = temperature;
+    }
+
+    public void set(char unit) {
+        this.unit = unit;
+    }
+    public void set(double temperature, char unit) {
+        this.temperature = temperature;
+        this.unit = unit;
+    }
+
 
 
 }
