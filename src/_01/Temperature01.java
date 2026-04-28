@@ -17,4 +17,5 @@ public class Temperature01 {
     public void writeOutput() {
         System.out.println("Temperature = " + temperature + " degrees " + unit + ".");
     }
+
 }
