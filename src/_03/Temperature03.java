@@ -65,7 +65,56 @@ public class Temperature03 {
         this.temperature = temperature;
         this.unit = unit;
     }
+    public double getC(){
+        if(unit=='C' || unit=='c'){
+            return temperature;
+        }
+        else{
+            return (temperature - 32) *5.0/9.0;
+        }
+    }
+    public double getF(){
+        if(unit=='F' || unit=='f'){
+            return temperature;
+        }
+        else{
+            return temperature * 9.0/5.0 +32;
+        }
+    }
 
+    public boolean equals(Temperature03 temperature) {
+        double my= this.getC();
+        double others = temperature.getC();
+
+        if(my==others){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public boolean isGreaterThan(Temperature03 temperature) {
+        double my= this.getC();
+        double others = temperature.getC();
+        if(my >others){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public boolean isLessThan(Temperature03 temperature) {
+        double my= this.getC();
+        double others = temperature.getC();
+        if(my <others) {
+            return true;
+        }
+
+        else {
+            return false;
+        }
+    }
 
 
 }
